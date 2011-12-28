@@ -7,6 +7,9 @@
     <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
   </head>
   <body>
+    <%= render "pages/header" %>
     <%= yield %>
+    <%= render "pages/footer" %>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
